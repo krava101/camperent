@@ -1,11 +1,15 @@
 :root {
-  font-family: sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1.5;
   font-weight: 400;
-}
-
-section {
-  padding: 10px 5px;
+  color: var(--deep-sea);
+  --deep-sea: #101828;
+  --slate: #475467;
+  --scarlet: #e44848;
+  --pomegranate: #d84343;
+  --sunny: #ffc531;
+  --snowy: #f2f4f7;
+  --cloud: #f7f7f7;
 }
 
 body {
@@ -33,4 +37,8 @@ ol {
 img {
   display: block;
   max-width: 100%;
+}
+
+button {
+  font-family: inherit;
 }
