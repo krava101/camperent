@@ -1,6 +1,6 @@
 .card {
   display: flex;
-  gap: 24px;
+  gap: 22px;
   width: 100%;
   max-width: 888px;
   padding: 24px;
@@ -99,4 +99,19 @@
   -webkit-box-orient: vertical;
   -moz-box-orient: vertical;
   -webkit-line-clamp: 1;
+}
+
+.modalBtn {
+  display: grid;
+  place-items: center;
+  width: 166px;
+  height: 56px;
+  border-radius: 200px;
+  border: none;
+  background-color: var(--scarlet);
+
+  color: var(--white);
+  font-weight: 500;
+  letter-spacing: -0.08px;
+  text-align: left;
 }

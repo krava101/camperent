@@ -1,13 +1,16 @@
 import scss from './AdvertsCard.module.scss';
 import icons from '../../assets/sprite.svg';
+import CategoriesList from '../CategoriesList/CategoriesList';
 
 function AdvertsCard({ advert }) {
   const categories = {
     ...advert.details,
     adults: advert.adults,
     children: advert.children,
+    engine: advert.engine,
+    transmission: advert.transmission,
   };
-  console.dir(categories);
+
   return (
     <div className={scss.card}>
       <div
@@ -43,6 +46,10 @@ function AdvertsCard({ advert }) {
           </div>
         </div>
         <p className={scss.description}>{advert.description}</p>
+        <CategoriesList categories={categories} />
+        <button className={scss.modalBtn} type="button">
+          Show more
+        </button>
       </div>
     </div>
   );
