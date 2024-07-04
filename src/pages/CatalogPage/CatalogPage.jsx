@@ -1,7 +1,9 @@
+import AdvertsList from '../../components/AdvertsList/AdvertsList';
+
 function CatalogPage() {
   return (
     <main>
-      <h1>Catalog</h1>
+      <AdvertsList />
     </main>
   );
 }

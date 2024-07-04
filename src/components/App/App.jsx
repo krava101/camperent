@@ -16,6 +16,7 @@ function App() {
   useEffect(() => {
     dispatch(fetchAdverts());
   });
+
   return (
     <>
       <Navigation />

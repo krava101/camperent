@@ -1,0 +1,102 @@
+.card {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  max-width: 888px;
+  padding: 24px;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 20px;
+  background-color: var(--white);
+}
+
+.imgWrap {
+  min-width: 290px;
+  height: 310px;
+  border-radius: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.advert {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.advertTitle {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 8px;
+
+  h2 {
+    max-width: 380px;
+    height: 30px;
+    font-size: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+
+  button {
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: transparent;
+    svg {
+      width: inherit;
+      height: inherit;
+      stroke: var(--deep-sea);
+      fill: none;
+    }
+  }
+}
+
+.advertInfo {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.rating p {
+  text-decoration-line: underline;
+  text-underline-offset: 3px;
+}
+
+.location svg {
+  stroke: var(--deep-sea);
+  fill: none;
+}
+
+.description {
+  display: -webkit-box;
+  color: var(--slate);
+  max-width: 100%;
+  height: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}

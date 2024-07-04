@@ -1,13 +1,13 @@
 import { NavLink } from 'react-router-dom';
-import css from './Navigation.module.css';
+import scss from './Navigation.module.scss';
 import clsx from 'clsx';
 
 function Navigation() {
-  const navLink = ({ isActive }) => clsx(css.link, isActive && css.active);
+  const navLink = ({ isActive }) => clsx(scss.link, isActive && scss.active);
   return (
-    <header className={css.header}>
-      <nav className={css.nav}>
-        <NavLink className={css.logo} to={'/'}>
+    <header className={scss.header}>
+      <nav>
+        <NavLink className={scss.logo} to={'/'}>
           CampeR<span>ent</span>
         </NavLink>
         <ul>

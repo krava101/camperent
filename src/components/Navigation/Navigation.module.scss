@@ -1,0 +1,42 @@
+.header {
+  padding: 14px 0;
+  background-color: var(--snowy);
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    ul {
+      display: flex;
+      gap: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+
+  span {
+    color: var(--scarlet);
+  }
+}
+
+.link {
+  font-weight: 500;
+  font-size: 20px;
+  transition: color 0.3s ease-in;
+
+  &:hover,
+  &:focus,
+  &.active {
+    color: var(--scarlet);
+  }
+}

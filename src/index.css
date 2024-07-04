@@ -1,7 +1,9 @@
 :root {
   font-family: 'Inter', sans-serif;
+  font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
+  letter-spacing: 0;
   color: var(--deep-sea);
   --deep-sea: #101828;
   --slate: #475467;
@@ -10,6 +12,11 @@
   --sunny: #ffc531;
   --snowy: #f2f4f7;
   --cloud: #f7f7f7;
+  --white: #fff;
+}
+
+main {
+  padding: 100px 64px;
 }
 
 body {
@@ -41,4 +48,6 @@ img {
 
 button {
   font-family: inherit;
+  padding: 0;
+  cursor: pointer;
 }
