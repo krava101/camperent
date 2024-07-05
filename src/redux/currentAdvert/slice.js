@@ -4,7 +4,7 @@ const slice = createSlice({
   name: 'currentAdvert',
   initialState: {
     advert: {},
-    categories: {},
+    categories: [],
   },
   reducers: {
     setCurrentAdvert(state, action) {
@@ -13,7 +13,7 @@ const slice = createSlice({
     },
     resetCurrentAdvert(state) {
       state.advert = {};
-      state.categories = {};
+      state.categories = [];
     },
   },
 });

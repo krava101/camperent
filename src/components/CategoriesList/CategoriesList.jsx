@@ -1,51 +1,17 @@
-import icons from '../../assets/sprite.svg';
 import scss from './CategoriesList.module.scss';
+import CategoriesItem from '../CategoriesItem/CategoriesItem';
 
 function CategoriesList({ categories }) {
   return (
     <ul className={scss.list}>
-      <li>
-        <svg>
-          <use href={`${icons}#icon-adults`}></use>
-        </svg>
-        <p>{categories.adults} adults</p>
-      </li>
-      <li>
-        <svg>
-          <use xlinkHref={`${icons}#icon-transmission`}></use>
-        </svg>
-        <p>{categories.transmission}</p>
-      </li>
-      <li>
-        <svg>
-          <use xlinkHref={`${icons}#icon-engine`}></use>
-        </svg>
-        <p>{categories.engine}</p>
-      </li>
-      {categories.kitchen && (
-        <li>
-          <svg>
-            <use xlinkHref={`${icons}#icon-kitchen`}></use>
-          </svg>
-          <p>kitchen</p>
-        </li>
-      )}
+      <CategoriesItem value={`${categories.adults} adults`} title="adults" />
+      <CategoriesItem value={categories.transmission} title="transmission" />
+      <CategoriesItem value={categories.engine} title="engine" />
+      {categories.kitchen && <CategoriesItem value="kitchen" title="kitchen" />}
       {categories.beds && (
-        <li>
-          <svg>
-            <use xlinkHref={`${icons}#icon-beds`}></use>
-          </svg>
-          <p>{categories.beds} beds</p>
-        </li>
+        <CategoriesItem value={`${categories.beds} beds`} title="beds" />
       )}
-      {categories.airConditioner && (
-        <li>
-          <svg>
-            <use xlinkHref={`${icons}#icon-ac`}></use>
-          </svg>
-          <p>AC</p>
-        </li>
-      )}
+      {categories.airConditioner && <CategoriesItem value="AC" title="AC" />}
     </ul>
   );
 }

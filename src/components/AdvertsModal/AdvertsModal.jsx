@@ -5,6 +5,7 @@ import scss from './AdvertsModal.module.scss';
 import { setIsAdvertsModalOpen } from '../../redux/controls/slice';
 import { resetCurrentAdvert } from '../../redux/currentAdvert/slice';
 import { useState } from 'react';
+import ModalCategoriesList from '../ModalCategoriesList/ModalCategoriesList';
 
 function AdvertsModal() {
   const dispatch = useDispatch();
@@ -54,6 +55,7 @@ function AdvertsModal() {
           ))}
         </ul>
         <p className={scss.description}>{advert.description}</p>
+        <ModalCategoriesList />
       </div>
     </div>
   );

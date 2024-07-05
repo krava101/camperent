@@ -4,9 +4,11 @@ import CategoriesList from '../CategoriesList/CategoriesList';
 import { useDispatch } from 'react-redux';
 import { setIsAdvertsModalOpen } from '../../redux/controls/slice';
 import { setCurrentAdvert } from '../../redux/currentAdvert/slice';
+import { useEffect } from 'react';
 
 function AdvertsCard({ advert }) {
   const dispatch = useDispatch();
+  const categoriesArr = [];
   const categories = {
     ...advert.details,
     adults: advert.adults,
@@ -15,9 +17,17 @@ function AdvertsCard({ advert }) {
     transmission: advert.transmission,
   };
 
+  useEffect(() => {
+    for (const key in categories) {
+      key === 'airConditioner'
+        ? categoriesArr.push({ key: 'AC', value: categories[key] })
+        : categoriesArr.push({ key: key, value: categories[key] });
+    }
+  }, [categories]);
+
   const openAdvertsModal = () => {
     dispatch(setIsAdvertsModalOpen(true));
-    dispatch(setCurrentAdvert({ advert, categories }));
+    dispatch(setCurrentAdvert({ advert, categories: categoriesArr }));
   };
 
   return (
