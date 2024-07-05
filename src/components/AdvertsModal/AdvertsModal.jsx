@@ -19,7 +19,7 @@ function AdvertsModal() {
   return (
     <div className={scss.modal}>
       <div className={scss.container}>
-        <div className={scss.titleWrap}>
+        <div className={scss.header}>
           <div className={scss.title}>
             <h2>{advert.name}</h2>
             <button

@@ -25,7 +25,7 @@ function Modals() {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
         >
-          <Backdrop onClick={closeAdvertsModal}>
+          <Backdrop onClose={closeAdvertsModal}>
             <motion.div
               animate={{ scale: [1.02, 1.03, 1, 1] }}
               exit={{ scale: [1, 1.01, 1, 0.95] }}
