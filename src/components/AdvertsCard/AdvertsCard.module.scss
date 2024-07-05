@@ -13,6 +13,7 @@
   min-width: 290px;
   height: 310px;
   border-radius: 10px;
+  background-color: var(--snowy);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -99,6 +100,7 @@
   -webkit-box-orient: vertical;
   -moz-box-orient: vertical;
   -webkit-line-clamp: 1;
+  line-clamp: 1;
 }
 
 .modalBtn {

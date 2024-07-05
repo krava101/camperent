@@ -1,0 +1,1 @@
+export const selectIsAdvertsModalOpen = state => state.controls.isAdvertsModalOpen;

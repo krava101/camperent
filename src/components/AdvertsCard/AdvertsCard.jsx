@@ -1,14 +1,23 @@
 import scss from './AdvertsCard.module.scss';
 import icons from '../../assets/sprite.svg';
 import CategoriesList from '../CategoriesList/CategoriesList';
+import { useDispatch } from 'react-redux';
+import { setIsAdvertsModalOpen } from '../../redux/controls/slice';
+import { setCurrentAdvert } from '../../redux/currentAdvert/slice';
 
 function AdvertsCard({ advert }) {
+  const dispatch = useDispatch();
   const categories = {
     ...advert.details,
     adults: advert.adults,
     children: advert.children,
     engine: advert.engine,
     transmission: advert.transmission,
+  };
+
+  const openAdvertsModal = () => {
+    dispatch(setIsAdvertsModalOpen(true));
+    dispatch(setCurrentAdvert({ advert, categories }));
   };
 
   return (
@@ -47,7 +56,11 @@ function AdvertsCard({ advert }) {
         </div>
         <p className={scss.description}>{advert.description}</p>
         <CategoriesList categories={categories} />
-        <button className={scss.modalBtn} type="button">
+        <button
+          className={scss.modalBtn}
+          type="button"
+          onClick={openAdvertsModal}
+        >
           Show more
         </button>
       </div>
