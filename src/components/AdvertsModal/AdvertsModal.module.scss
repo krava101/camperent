@@ -81,9 +81,15 @@
   }
 }
 
-.rating p {
-  text-decoration-line: underline;
-  text-underline-offset: 3px;
+.rating {
+  p {
+    text-decoration-line: underline;
+    text-underline-offset: 3px;
+  }
+
+  svg {
+    fill: var(--sunny);
+  }
 }
 
 .location svg {

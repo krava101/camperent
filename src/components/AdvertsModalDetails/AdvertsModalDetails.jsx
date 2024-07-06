@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import scss from './AdvertsModalDetails.module.scss';
 import AdvertsFeatures from '../AdvertsFeatures/AdvertsFeatures';
+import AdvertsReviews from '../AdvertsReviews/AdvertsReviews';
 import clsx from 'clsx';
 
 function AdvertsModalDetails() {
@@ -34,6 +35,7 @@ function AdvertsModalDetails() {
         <hr />
       </div>
       {nav === 'features' && <AdvertsFeatures />}
+      {nav === 'reviews' && <AdvertsReviews />}
     </div>
   );
 }
