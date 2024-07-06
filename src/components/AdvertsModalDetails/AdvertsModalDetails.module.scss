@@ -1,0 +1,49 @@
+.navigation {
+  position: relative;
+  margin-bottom: 44px;
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 24px;
+
+    li {
+      line-height: 0;
+    }
+
+    button {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 24px;
+      background-color: transparent;
+      border: none;
+    }
+  }
+
+  hr {
+    border: 1px solid rgba(16, 24, 40, 0.2);
+    margin: 0;
+  }
+}
+
+.indicator {
+  position: absolute;
+  bottom: -1.5px;
+  left: 0;
+  width: 100%;
+  max-width: 85px;
+  height: 5px;
+  background-color: var(--scarlet);
+  transition: transform 0.3s ease-in, max-width 0.3s ease-in;
+
+  &.features {
+    max-width: 85px;
+    transform: translateX(0);
+  }
+
+  &.reviews {
+    max-width: 83px;
+    transform: translateX(123px);
+  }
+}

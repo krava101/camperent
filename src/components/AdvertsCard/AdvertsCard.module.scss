@@ -1,3 +1,5 @@
+@import '../../styles/mixins.scss';
+
 .card {
   display: flex;
   gap: 22px;
@@ -100,20 +102,9 @@
   -webkit-box-orient: vertical;
   -moz-box-orient: vertical;
   -webkit-line-clamp: 1;
-  line-clamp: 1;
 }
 
 .modalBtn {
-  display: grid;
-  place-items: center;
+  @include scarletBtn();
   width: 166px;
-  height: 56px;
-  border-radius: 200px;
-  border: none;
-  background-color: var(--scarlet);
-
-  color: var(--white);
-  font-weight: 500;
-  letter-spacing: -0.08px;
-  text-align: left;
 }

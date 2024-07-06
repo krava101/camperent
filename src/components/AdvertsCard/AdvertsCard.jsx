@@ -4,7 +4,7 @@ import CategoriesList from '../CategoriesList/CategoriesList';
 import { useDispatch } from 'react-redux';
 import { setIsAdvertsModalOpen } from '../../redux/controls/slice';
 import { setCurrentAdvert } from '../../redux/currentAdvert/slice';
-import { useEffect } from 'react';
+import { useCallback, useEffect } from 'react';
 
 function AdvertsCard({ advert }) {
   const dispatch = useDispatch();
