@@ -1,0 +1,23 @@
+@import '../../styles/mixins.scss';
+
+.input {
+  @include formFields();
+  display: flex;
+  height: 56px;
+  margin-bottom: 14px;
+  text-align: left;
+
+  span {
+    width: 100%;
+
+    &.placeholder {
+      color: rgba(16, 24, 40, 0.6);
+      line-height: 20px;
+    }
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}

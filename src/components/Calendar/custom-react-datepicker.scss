@@ -1,0 +1,97 @@
+.react-datepicker__tab-loop {
+  .react-datepicker__triangle {
+    display: none;
+  }
+
+  .react-datepicker {
+    outline: 1px solid rgba(16, 24, 40, 0.2);
+    border: none;
+    border-radius: 12px;
+    background-color: var(--white);
+    padding: 16px;
+  }
+
+  .react-datepicker__header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: transparent;
+    border: none;
+    padding: 0 0 20px 0;
+
+    .react-datepicker__current-month {
+      color: var(--deep-sea);
+      font-size: 16px;
+      line-height: 1.5;
+      background-color: transparent;
+    }
+
+    .react-datepicker__header__dropdown {
+      display: none;
+    }
+
+    .react-datepicker__day-names {
+      display: flex;
+      gap: 1px;
+      margin: 0;
+
+      .react-datepicker__day-name {
+        width: 41px;
+        height: 14px;
+        margin: 0;
+        color: var(--slate);
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 120%;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .react-datepicker__month {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    margin: 0;
+  }
+
+  .react-datepicker__week {
+    display: flex;
+    gap: 1px;
+
+    .react-datepicker__day {
+      display: grid;
+      place-items: center;
+      width: 41px;
+      height: 32px;
+      margin: 0;
+
+      color: var(--deep-sea);
+      font-size: 14px;
+      line-height: 16px;
+      border-radius: 0.3rem;
+
+      &.react-datepicker__day--today {
+        border: 2px solid var(--scarlet);
+        background-color: transparent;
+        font-weight: 400;
+      }
+
+      &.react-datepicker__day--selected {
+        background-color: var(--scarlet);
+        color: var(--white);
+      }
+      &.react-datepicker__day--keyboard-selected:not(
+          .react-datepicker__day--today
+        ) {
+        background-color: #e44848b1;
+        color: var(--white);
+      }
+
+      &.react-datepicker__day--disabled,
+      &.react-datepicker__day--outside-month {
+        color: #4754676b;
+      }
+    }
+  }
+}
