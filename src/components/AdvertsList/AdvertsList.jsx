@@ -5,8 +5,11 @@ import scss from './AdvertsList.module.scss';
 function AdvertsList({ adverts, loading }) {
   return (
     <>
-      {!adverts.length ? (
-        <AdvertsLoader />
+      {!loading && !adverts.length ? (
+        <p>
+          We apologize, but there are no campers available for your request at
+          the moment :(
+        </p>
       ) : (
         <>
           <ul className={scss.list}>

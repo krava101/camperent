@@ -3,6 +3,8 @@ import FiltersEquipment from '../FiltersEquipment/FiltersEquipment';
 import FiltersLocation from '../FiltersLocation/FiltersLocation';
 import FiltersTypes from '../FiltersTypes/FiltersTypes';
 import scss from './Filters.module.scss';
+import { setFilters } from '../../redux/filter/slice';
+import { useDispatch } from 'react-redux';
 
 const initialValues = {
   location: '',
@@ -11,8 +13,10 @@ const initialValues = {
 };
 
 function Filters() {
+  const dispatch = useDispatch();
+
   const handleSubmit = values => {
-    console.log(values);
+    dispatch(setFilters(values));
   };
 
   return (
