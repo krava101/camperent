@@ -21,9 +21,9 @@ adventures.
 ### Filtering
 
 1. Allows users to filter campers by location.
-2. Filters campers by selected equipment (AC, Automatic, Kitchen, TV,
-   Shower/WC).
-3. Filters campers by type (e.g., motorhome, trailer).
+2. Filters campers by selected equipment (Air Conditioner, Transmission,
+   Kitchen, TV, Shower/WC).
+3. Filters campers by type (alcove, fully integrated, panel truck).
 
 ### Modal Window
 
