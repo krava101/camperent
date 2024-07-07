@@ -39,20 +39,20 @@ Allows users to add or remove advertisements from their favorites list.
 
 ## Technologies Used
 
-- Netlify: this is where the app lives.)
-- Mockapi.io: for a simple back-end and data base.
-- Axios: connection between front-end and back-end.
-- React: front-end library for building user interfaces.
-- React Router: for declarative routing in the application.
-- Redux: for managing application state, especially for adverts, favorites and
-  filtering.
-- SCSS: CSS preprocessor for comfortable and effective styling.
-- Formik: for convenient forms managment.
-- Yup: implemented to validate user inputs in the booking form.
-- Framer motion: smooth animations of mounting and unmounting.
-- React datepicker: handy choice of booking date.
-- React loader spinner.
-- Modern normalize.
-- Clsx.
-- Vite.
-- Git, npm.
+- **Netlify**: this is where the app lives.)
+- **Mockapi.io**: for a simple back-end and data base.
+- **Axios**: connection between front-end and back-end.
+- **React**: front-end library for building user interfaces.
+- **React Router**: for declarative routing in the application.
+- **Redux**: for managing application state, especially for adverts, favorites
+  and filtering.
+- **SCSS**: CSS preprocessor for comfortable and effective styling.
+- **Formik**: for convenient forms managment.
+- **Yup**: implemented to validate user inputs in the booking form.
+- **Framer motion**: smooth animations of mounting and unmounting.
+- **React datepicker**: handy choice of booking date.
+- **React loader spinner**.
+- **Modern normalize**.
+- **Clsx**.
+- **Vite**.
+- **Git, npm**.
