@@ -24,11 +24,9 @@ const slice = createSlice({
       .addCase(fetchAdverts.pending, handlePending)
       .addCase(fetchAdverts.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.adverts = state.adverts.concat(action.payload);
+        state.adverts = [...state.adverts, ...action.payload];
+        state.isLastPage = action.payload.length < 4;
         state.error = null;
-        if (action.payload.length < 4) {
-          state.isLastPage = true;
-        }
       })
       .addCase(fetchAdverts.rejected, handleRejected);
   },

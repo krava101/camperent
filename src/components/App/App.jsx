@@ -1,10 +1,12 @@
 import { Suspense, lazy, useEffect } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
-import Navigation from '../Navigation/Navigation';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAdverts } from '../../redux/adverts/operations';
 import { selectPage } from '../../redux/filter/selectors';
+
+import Navigation from '../Navigation/Navigation';
+import MainLoader from '../MainLoader/MainLoader';
 
 const HomePage = lazy(() => import('../../pages/HomePage/HomePage'));
 const CatalogPage = lazy(() => import('../../pages/CatalogPage/CatalogPage'));
@@ -22,7 +24,7 @@ function App() {
   return (
     <>
       <Navigation />
-      <Suspense fallback={null}>
+      <Suspense fallback={<MainLoader />}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/catalog" element={<CatalogPage />} />
