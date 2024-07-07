@@ -5,15 +5,15 @@ import clsx from 'clsx';
 import { vehicleEquipment } from '../../redux/filter/constants';
 
 function FiltersEquipment({ onSelect }) {
-  const [active, setActive] = useState('');
+  const [active, setActive] = useState([]);
 
   const handleSelect = filter => {
-    if (active !== filter) {
-      setActive(filter);
-      onSelect(filter);
+    if (!active.find(e => e === filter)) {
+      setActive([...active, filter]);
+      onSelect([...active, filter]);
     } else {
-      setActive('');
-      onSelect('');
+      setActive(active.filter(e => e !== filter));
+      onSelect(active.filter(e => e !== filter));
     }
   };
 
@@ -26,7 +26,7 @@ function FiltersEquipment({ onSelect }) {
         <li
           className={clsx(
             scss.item,
-            active === vehicleEquipment.ac && scss.active
+            active.find(a => a === vehicleEquipment.ac) && scss.active
           )}
         >
           <button
@@ -42,7 +42,7 @@ function FiltersEquipment({ onSelect }) {
         <li
           className={clsx(
             scss.item,
-            active === vehicleEquipment.transmission && scss.active
+            active.find(e => e === vehicleEquipment.transmission) && scss.active
           )}
         >
           <button
@@ -58,7 +58,7 @@ function FiltersEquipment({ onSelect }) {
         <li
           className={clsx(
             scss.item,
-            active === vehicleEquipment.kitchen && scss.active
+            active.find(e => e === vehicleEquipment.kitchen) && scss.active
           )}
         >
           <button
@@ -74,7 +74,7 @@ function FiltersEquipment({ onSelect }) {
         <li
           className={clsx(
             scss.item,
-            active === vehicleEquipment.tv && scss.active
+            active.find(e => e === vehicleEquipment.tv) && scss.active
           )}
         >
           <button
@@ -90,7 +90,7 @@ function FiltersEquipment({ onSelect }) {
         <li
           className={clsx(
             scss.item,
-            active === vehicleEquipment.bathroom && scss.active
+            active.find(e => e === vehicleEquipment.bathroom) && scss.active
           )}
         >
           <button

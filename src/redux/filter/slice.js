@@ -5,7 +5,7 @@ const slice = createSlice({
   initialState: {
     page: 1,
     type: '',
-    equipment: '',
+    equipment: [],
     location: '',
   },
   reducers: {

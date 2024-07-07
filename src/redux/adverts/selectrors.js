@@ -44,20 +44,27 @@ export const selectFilteredAdverts = createSelector(
         return false;
       }
 
-      if (equipment && equipment !== '') {
-        if (equipment === vehicleEquipment.bathroom) {
-          if (advert.details.toilet <= 0 && advert.details.shower <= 0) {
-            return false;
+      if (equipment && equipment.length > 0) {
+        const hasAllEquipments = equipment.every(e => {
+          if (e === vehicleEquipment.bathroom) {
+            return advert.details.toilet > 0 || advert.details.shower > 0;
+          } else {
+            if (e === vehicleEquipment.transmission) {
+              return advert.transmission === e;
+            }
+            return advert.details[e] > 0;
           }
-        } else {
-          if (advert.details[equipment] <= 0) {
-            return false;
-          }
+        });
+
+        if (!hasAllEquipments) {
+          return false;
         }
       }
 
       return true;
     });
+
+    console.log(filteredAdverts);
 
     const startIndex = (page - 1) * 4;
     const endIndex = startIndex + 4;

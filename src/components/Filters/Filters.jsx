@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux';
 
 const initialValues = {
   location: '',
-  equipment: '',
+  equipment: [],
   type: '',
 };
 
@@ -16,6 +16,7 @@ function Filters() {
   const dispatch = useDispatch();
 
   const handleSubmit = values => {
+    console.log(values);
     dispatch(setFilters(values));
   };
 
