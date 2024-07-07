@@ -14,7 +14,7 @@ const FavoritesPage = lazy(() =>
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchAdverts());
+    dispatch(fetchAdverts(2));
   });
 
   return (

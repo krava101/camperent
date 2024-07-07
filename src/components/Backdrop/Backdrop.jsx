@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { useEffect } from 'react';
-import css from './Backdrop.module.css';
+import scss from './Backdrop.module.scss';
 
 function Backdrop({ children, onClose }) {
   const backdrop = useRef(null);
@@ -18,7 +18,7 @@ function Backdrop({ children, onClose }) {
   }, [onClose]);
 
   return (
-    <div ref={backdrop} className={css.backdrop}>
+    <div ref={backdrop} className={scss.backdrop}>
       {children}
     </div>
   );

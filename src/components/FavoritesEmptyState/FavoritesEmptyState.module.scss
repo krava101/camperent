@@ -1,0 +1,24 @@
+.message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  h3 {
+    font-size: 24px;
+    span {
+      color: var(--scarlet);
+    }
+  }
+
+  p {
+    max-width: 800px;
+    color: var(--slate);
+    text-align: center;
+
+    a {
+      color: var(--scarlet);
+      text-underline-offset: 2px;
+    }
+  }
+}
