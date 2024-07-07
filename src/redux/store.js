@@ -10,6 +10,7 @@ import {
   REGISTER,
 } from 'redux-persist';
 import advertsReducer from './adverts/slice.js';
+import filterReducer from './filter/slice.js';
 import controlsReducer from './controls/slice.js';
 import currentAdvertReducer from './currentAdvert/slice.js';
 import favoritesAdvertsReducer from './favoritesAdverts/slice.js';
@@ -29,6 +30,7 @@ const favPersistReducer = persistReducer(
 export const store = configureStore({
   reducer: {
     adverts: advertsReducer,
+    filter: filterReducer,
     controls: controlsReducer,
     currentAdvert: currentAdvertReducer,
     favoritesAdverts: favPersistReducer,

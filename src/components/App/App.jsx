@@ -2,8 +2,9 @@ import { Suspense, lazy, useEffect } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 import Navigation from '../Navigation/Navigation';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { fetchAdverts } from '../../redux/adverts/operations';
+import { selectPage } from '../../redux/filter/selectors';
 
 const HomePage = lazy(() => import('../../pages/HomePage/HomePage'));
 const CatalogPage = lazy(() => import('../../pages/CatalogPage/CatalogPage'));
@@ -13,9 +14,10 @@ const FavoritesPage = lazy(() =>
 
 function App() {
   const dispatch = useDispatch();
+  const page = useSelector(selectPage);
   useEffect(() => {
-    dispatch(fetchAdverts(2));
-  });
+    dispatch(fetchAdverts(page));
+  }, [page, dispatch]);
 
   return (
     <>
