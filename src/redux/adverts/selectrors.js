@@ -64,8 +64,6 @@ export const selectFilteredAdverts = createSelector(
       return true;
     });
 
-    console.log(filteredAdverts);
-
     const startIndex = (page - 1) * 4;
     const endIndex = startIndex + 4;
 
