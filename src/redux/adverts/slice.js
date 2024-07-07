@@ -24,12 +24,11 @@ const slice = createSlice({
       .addCase(fetchAdverts.pending, handlePending)
       .addCase(fetchAdverts.fulfilled, (state, action) => {
         state.isLoading = false;
-        const isMatch = state.adverts.find(e =>
-          action.payload.find(a => e._id === a._id)
+        const newAdverts = action.payload.filter(
+          e =>
+            !state.adverts.some(existingAdvert => existingAdvert._id === e._id)
         );
-        if (!isMatch) {
-          state.adverts = [...state.adverts, ...action.payload];
-        }
+        state.adverts = [...state.adverts, ...newAdverts];
         state.isLastPage = action.payload.length < 4;
         state.error = null;
       })

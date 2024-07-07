@@ -6,20 +6,23 @@ function AdvertsList({ adverts, loading }) {
   return (
     <>
       {!loading && !adverts.length ? (
-        <p>
+        <p className={scss.text}>
           We apologize, but there are no campers available for your request at
           the moment :(
         </p>
       ) : (
         <>
-          <ul className={scss.list}>
-            {adverts.map(ad => (
-              <li key={ad._id}>
-                <AdvertsCard advert={ad} />
-              </li>
-            ))}
-          </ul>
-          {loading && <AdvertsLoader />}
+          {loading ? (
+            <AdvertsLoader />
+          ) : (
+            <ul className={scss.list}>
+              {adverts.map(ad => (
+                <li key={ad._id}>
+                  <AdvertsCard advert={ad} />
+                </li>
+              ))}
+            </ul>
+          )}
         </>
       )}
     </>

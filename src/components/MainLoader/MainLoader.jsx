@@ -5,8 +5,8 @@ function MainLoader() {
   return (
     <TailSpin
       visible={true}
-      height="80"
-      width="80"
+      height="40"
+      width="40"
       color="#e44848"
       ariaLabel="tail-spin-loading"
       radius="1"
