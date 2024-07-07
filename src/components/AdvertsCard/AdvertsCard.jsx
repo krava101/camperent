@@ -5,6 +5,11 @@ import { useDispatch } from 'react-redux';
 import { setIsAdvertsModalOpen } from '../../redux/controls/slice';
 import { setCurrentAdvert } from '../../redux/currentAdvert/slice';
 import { useEffect } from 'react';
+import {
+  addAdvertToFavorites,
+  removeAdvertFromFavorites,
+} from '../../redux/favoritesAdverts/slice';
+import clsx from 'clsx';
 
 function AdvertsCard({ advert }) {
   const dispatch = useDispatch();
@@ -30,6 +35,14 @@ function AdvertsCard({ advert }) {
     dispatch(setCurrentAdvert({ advert, categories: categoriesArr }));
   };
 
+  const addToFavorites = () => {
+    if (advert?.favorites === true) {
+      dispatch(removeAdvertFromFavorites(advert._id));
+    } else {
+      dispatch(addAdvertToFavorites(advert));
+    }
+  };
+
   return (
     <div className={scss.card}>
       <div
@@ -42,7 +55,14 @@ function AdvertsCard({ advert }) {
             <h2>{advert.name}</h2>
             <p>
               €{advert.price}
-              <button className={scss.likeBtn} type="button">
+              <button
+                className={clsx(
+                  scss.likeBtn,
+                  advert.favorites ? scss.like : ''
+                )}
+                type="button"
+                onClick={addToFavorites}
+              >
                 <svg>
                   <use href={`${icons}#icon-like`}></use>
                 </svg>

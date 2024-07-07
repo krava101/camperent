@@ -50,18 +50,26 @@
     align-items: center;
     gap: 11px;
   }
+}
 
-  button {
-    width: 24px;
-    height: 24px;
-    border: none;
-    background-color: transparent;
+.likeBtn {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: transparent;
+
+  &.like {
     svg {
-      width: inherit;
-      height: inherit;
-      stroke: var(--deep-sea);
-      fill: none;
+      stroke: var(--scarlet);
+      fill: var(--scarlet);
     }
+  }
+
+  svg {
+    width: inherit;
+    height: inherit;
+    stroke: var(--deep-sea);
+    fill: none;
   }
 }
 

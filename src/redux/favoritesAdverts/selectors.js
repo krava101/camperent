@@ -1,0 +1,1 @@
+export const selectFavoritesAdverts = (state) => state.favoritesAdverts.adverts;
