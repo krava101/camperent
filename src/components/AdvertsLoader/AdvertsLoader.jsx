@@ -38,7 +38,6 @@ function AdvertsLoader() {
           </li>
         ))}
       </ul>
-      <div className={scss.loadBtn}></div>
     </>
   );
 }

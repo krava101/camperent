@@ -112,14 +112,9 @@
   @include loaderBg();
 }
 
-.btn,
-.loadBtn {
+.btn {
   width: 166px;
   height: 56px;
   border-radius: 200px;
   background-color: var(--snowy);
-}
-
-.loadBtn {
-  width: 145px;
 }
