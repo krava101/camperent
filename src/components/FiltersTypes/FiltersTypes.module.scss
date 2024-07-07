@@ -1,0 +1,35 @@
+@import '../../styles/mixins.scss';
+
+.types {
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid rgba(16, 24, 40, 0.1);
+    margin: 24px 0;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+
+    .item {
+      @include filterBtn();
+      width: calc((100% - 20px) / 3);
+
+      &.active {
+        border-color: var(--scarlet);
+      }
+
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}

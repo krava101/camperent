@@ -20,9 +20,6 @@ const initialValues = {
 
 function AdvertsForm() {
   const handleSubmit = (values, actions) => {
-    const response = {
-      ...values,
-    };
     actions.resetForm();
     window.location.pathname = '/catalog';
   };
