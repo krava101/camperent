@@ -1,6 +1,7 @@
 .listWrap {
   overflow: auto;
   max-height: 532px;
+  min-width: 430px;
   padding-right: 10px;
 
   &::-webkit-scrollbar {

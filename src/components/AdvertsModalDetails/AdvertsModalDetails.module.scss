@@ -35,7 +35,7 @@
   max-width: 85px;
   height: 5px;
   background-color: var(--scarlet);
-  transition: transform 0.2s ease-in, max-width 0.2s ease-in;
+  transition: transform 0.6s ease-in, max-width 0.6s ease-in;
 
   &.features {
     max-width: 85px;
@@ -46,4 +46,15 @@
     max-width: 83px;
     transform: translateX(123px);
   }
+}
+
+.detailsWrap {
+  display: flex;
+  align-items: start;
+  gap: 24px;
+}
+
+.animationWrap {
+  display: flex;
+  overflow: hidden;
 }
