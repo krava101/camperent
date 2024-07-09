@@ -1,9 +1,8 @@
 import { Suspense, lazy, useEffect } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { fetchAdverts } from '../../redux/adverts/operations';
-import { selectPage } from '../../redux/filter/selectors';
 
 import Navigation from '../Navigation/Navigation';
 import MainLoader from '../MainLoader/MainLoader';
@@ -16,7 +15,6 @@ const FavoritesPage = lazy(() =>
 
 function App() {
   const dispatch = useDispatch();
-  const page = useSelector(selectPage);
   useEffect(() => {
     dispatch(fetchAdverts());
   }, [dispatch]);
