@@ -18,8 +18,8 @@ function App() {
   const dispatch = useDispatch();
   const page = useSelector(selectPage);
   useEffect(() => {
-    dispatch(fetchAdverts(page));
-  }, [page, dispatch]);
+    dispatch(fetchAdverts());
+  }, [dispatch]);
 
   return (
     <>
